@@ -1,13 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
+html, body { height: 100%; background-color:#f3f3f7;}
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .mat-toolbar{
-    background-color: #aebec1;
+    background-color: #dbdde4;
 }
-.mat-card{
-    background-color: #aebec1;
-}
+/* .mat-card{
+    background-color: #dbdde4;
+} */
 .example-button-row .mat-button-base {
     margin: 8px 8px 8px 0;
   }
+  

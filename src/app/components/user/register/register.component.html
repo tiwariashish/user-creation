@@ -1,1 +1,113 @@
-<p>register works!</p>
+<mat-card>
+  <mat-card-content>
+    <form [formGroup]="registerForm">
+      <h2>Sign Up</h2>
+      <mat-form-field appearance="outline">
+        <input
+          matInput
+          placeholder="Email"
+          formControlName="username"
+          required
+        />
+        <mat-icon matSuffix>mail</mat-icon>
+        <mat-error> Please provide a valid email address </mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <input
+          matInput
+          [matDatepicker]="picker"
+          placeholder="Date of birth"
+          formControlName="dateOfBirth"
+          required
+        />
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+        <mat-error> Please provide date of birth </mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Security Question 1</mat-label>
+        <mat-select [formControl]="sQuestion1Control" name="food" required>
+          <mat-option
+            *ngFor="let food of securityQuestions1"
+            [value]="food.value"
+          >
+            {{ food.viewValue }}
+          </mat-option>
+        </mat-select>
+        <!-- <input
+          matInput
+          placeholder="Security Question 1"
+          formControlName="securityQuestion1"
+        /> -->
+        <mat-error> Please provide Security Question </mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Security Question 2</mat-label>
+        <mat-select [formControl]="sQuestion1Contro2" name="food" required>
+          <mat-option
+            *ngFor="let food of securityQuestions2"
+            [value]="food.value"
+          >
+            {{ food.viewValue }}
+          </mat-option>
+        </mat-select>
+        <!-- <input
+          matInput
+          placeholder="Security Question 2"
+          formControlName="securityQuestion2"
+          required
+        /> -->
+        <mat-error> Please provide Security Question 3</mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Security Question 3</mat-label>
+        <mat-select [formControl]="sQuestion1Contro3" name="food" required>
+          <mat-option
+            *ngFor="let food of securityQuestions3"
+            [value]="food.value"
+          >
+            {{ food.viewValue }}
+          </mat-option>
+        </mat-select>
+        <!-- <input
+          matInput
+          placeholder="Security Question 3"
+          formControlName="Security Question 3"
+          required
+        /> -->
+        <mat-error> Please provide Security Question 3 </mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <input
+          matInput
+          type="password"
+          placeholder="Password"
+          formControlName="password"
+          required
+        />
+        <mat-icon matSuffix>lock</mat-icon>
+        <mat-error> Please provide a valid password </mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <input
+          matInput
+          type="password"
+          placeholder="Retype Password"
+          formControlName="retypePassword"
+          required
+        />
+        <mat-icon matSuffix>lock</mat-icon>
+        <mat-error> Please provide a valid password </mat-error>
+      </mat-form-field>
+
+      <div class="button-row">
+        <button mat-raised-button color="primary" class="button-class">
+          Register
+        </button>
+      </div>
+    </form>
+  </mat-card-content>
+  <div class="text-center">
+    Already have an account? <a href routerLink="/login">Login here</a>
+  </div>
+</mat-card>

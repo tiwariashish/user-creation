@@ -1,0 +1,21 @@
+mat-card {
+    max-width: 400px;
+    margin: 2em auto;
+    text-align: center;
+  }
+  
+  mat-form-field {
+    display: block;
+  }
+  
+  .button-row .mat-button-base {
+    margin: 8px 8px 8px 0;
+  }
+  .button-row{
+      justify-content: flex-end;
+      display: flex;
+  }
+  /* .button-class{
+    width: 100px!important;
+      min-width: unset!important;
+  } */
